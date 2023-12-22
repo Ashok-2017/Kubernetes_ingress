@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ashok-ingress
+  namespace: qa
+spec: 
+  rules: 
+  - host: ashok.apps.com
+    http:
+      paths: backend
+      serviceNmae: ashok
+      servicePort: 80
